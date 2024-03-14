@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test auto import react If React is already introduced, no changes are made 1`] = `
+"import React from 'react';
+import _ from 'lodash';
+function App() {
+  return <div>123</div>;
+}"
+`;
+
+exports[`Test auto import react Whether the introduction of "React" can be automatically completed, if no react products are introduced 1`] = `
+"import React from "react";
+function App() {
+  return <div>123</div>;
+}"
+`;
+
+exports[`Test auto import react Whether the introduction of "React" can be automatically completed, if some react products 1`] = `
+"import React from "react";
+import { useState, useEffect } from 'react';
+import { useCallback } from 'react';
+function App() {
+  const [name, setName] = useState('张三');
+  useEffect(() => {
+    setName('李四');
+  }, []);
+  return <div>{name}</div>;
+}"
+`;

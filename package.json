@@ -1,0 +1,42 @@
+{
+  "name": "babel-plugin-auto-import-react",
+  "version": "1.0.0",
+  "repository": "https://github.com/yuansucai/babel-plugin-auto-import-react.git",
+  "author": "vinson.feng <377044677@qq.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "type": "commonjs",
+  "keywords": [],
+  "scripts": {
+    "test": "jest --coverage",
+    "clean": "rm -rf lib",
+    "build": "yarn clean && tsc",
+    "lib": "yarn clean && tsc",
+    "preversion": "npm install",
+    "version": "npm run build && git add -A",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.20.2",
+    "@babel/traverse": "^7.22.8",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-syntax-jsx": "^7.22.5",
+    "@babel/types": "^7.21.4",
+    "@types/babel__core": "^7.20.0",
+    "@types/babel__helper-plugin-utils": "^7.10.0",
+    "@types/babel__traverse": "^7.20.1",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^18.15.13",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1"
+  }
+}
